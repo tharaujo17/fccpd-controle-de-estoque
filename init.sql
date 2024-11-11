@@ -40,7 +40,7 @@ INSERT INTO ingredientes (name, quantity, unit, min_stock, supplier_id) VALUES
     ('Manteiga', 50.0, 'kg', 10.0, 3),
     ('Gotas de Chocolate', 30.0, 'kg', 8.0, 6),
     ('Amendoas', 25.0, 'kg', 5.0, 5),
-    ('Eseencia de Baunilha', 5.0, 'L', 1.0, 1),
+    ('Essencia de Baunilha', 5.0, 'L', 1.0, 1),
     ('Fermento em Po', 10.0, 'kg', 2.0, 2),
     ('Creme de Leite', 40.0, 'L', 8.0, 3);
 

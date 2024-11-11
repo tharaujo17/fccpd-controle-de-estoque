@@ -69,3 +69,23 @@ def criar_movimentacao(movement: schemas.StockMovementCreate, db: Session = Depe
 def listar_movimentacoes(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
     movements = db.query(models.StockMovement).offset(skip).limit(limit).all()
     return movements
+
+# Endpoint para deletar fornecedor
+@app.delete("/fornecedores/{id}", response_model=schemas.Supplier)
+def deletar_fornecedor(id: int, db: Session = Depends(get_db)):
+    fornecedor = db.query(models.Supplier).filter(models.Supplier.id == id).first()
+    if not fornecedor:
+        raise HTTPException(status_code=404, detail="Fornecedor não encontrado")
+    db.delete(fornecedor)
+    db.commit()
+    return fornecedor
+
+# Endpoint para deletar ingrediente
+@app.delete("/ingredientes/{id}", response_model=schemas.Ingredient)
+def deletar_ingrediente(id: int, db: Session = Depends(get_db)):
+    ingrediente = db.query(models.Ingredient).filter(models.Ingredient.id == id).first()
+    if not ingrediente:
+        raise HTTPException(status_code=404, detail="Ingrediente não encontrado")
+    db.delete(ingrediente)
+    db.commit()
+    return ingrediente
