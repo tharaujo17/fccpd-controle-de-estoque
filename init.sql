@@ -29,19 +29,19 @@ CREATE TABLE movimentacoes (
 INSERT INTO fornecedores (name, contact, email) VALUES
     ('Doces & Cia', '555-0101', 'contato@doces.com'),
     ('Mestre das Farinhas', '555-0102', 'vendas@mestrefarinhas.com'),
-    ('Laticínios Delícia', '555-0103', 'pedidos@laticinios.com'),
-    ('Reino do Açúcar', '555-0104', 'info@reinoacucar.com'),
-    ('Paraíso das Nozes', '555-0105', 'vendas@paraisonozes.com'),
+    ('Laticicios Delicia', '555-0103', 'pedidos@laticinios.com'),
+    ('Reino dos Doces', '555-0104', 'info@reinoacucar.com'),
+    ('Paraiso das Nozes', '555-0105', 'vendas@paraisonozes.com'),
     ('Mundo do Chocolate', '555-0106', 'pedidos@mundochocolate.com');
 
 INSERT INTO ingredientes (name, quantity, unit, min_stock, supplier_id) VALUES
     ('Farinha de Trigo', 100.0, 'kg', 20.0, 2),
-    ('Açúcar Refinado', 80.0, 'kg', 15.0, 4),
+    ('Acucar Refinado', 80.0, 'kg', 15.0, 4),
     ('Manteiga', 50.0, 'kg', 10.0, 3),
     ('Gotas de Chocolate', 30.0, 'kg', 8.0, 6),
-    ('Amêndoas', 25.0, 'kg', 5.0, 5),
-    ('Essência de Baunilha', 5.0, 'L', 1.0, 1),
-    ('Fermento em Pó', 10.0, 'kg', 2.0, 2),
+    ('Amendoas', 25.0, 'kg', 5.0, 5),
+    ('Eseencia de Baunilha', 5.0, 'L', 1.0, 1),
+    ('Fermento em Po', 10.0, 'kg', 2.0, 2),
     ('Creme de Leite', 40.0, 'L', 8.0, 3);
 
 INSERT INTO movimentacoes (ingredient_id, movement_type, quantity) VALUES
