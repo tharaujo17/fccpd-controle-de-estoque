@@ -39,9 +39,7 @@ services:
       - MYSQL_USER=confectionery
       - MYSQL_PASSWORD=secret
     volumes:
-      - mysql_data:/var/lib/mysql
+      - /var/lib/mysql
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
     command: --default-authentication-plugin=mysql_native_password
-
-volumes:
-  mysql_data:
+    
